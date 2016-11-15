@@ -15,12 +15,4 @@ function scan()
        "formats" : "QR_CODE", // default: all but PDF_417 and RSS_EXPANDED
    });
  }
- function er(){
-   alert(a);
-   $("#euri").html(a);
-   var firebaseThings = window.FirebaseDatabasePlugin.ref('main');
-   firebaseThings.updateChildren({
-    'thing1' : a,
-    'thing2' : 'bbb'
-    });
- }
+
