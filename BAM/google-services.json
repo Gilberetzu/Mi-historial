@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "972056565828",
+    "firebase_url": "https://bamserver-5dfd3.firebaseio.com",
+    "project_id": "bamserver-5dfd3",
+    "storage_bucket": "bamserver-5dfd3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972056565828:android:5a575572031c7873",
+        "android_client_info": {
+          "package_name": "com.mi_historial.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972056565828-82d9cu9eamf0rsvbnci3512diag6h2jr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn5iXuHU-A-_J5w_8PeRbqlP5gpTp2sWs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

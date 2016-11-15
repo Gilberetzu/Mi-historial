@@ -3,58 +3,36 @@
 <head>
 	<title>sdfsdfsds</title>
   <script type="text/javascript" src="js\jquery.js"></script>
+	<script type="text/javascript" src="js\scanner.js"></script>
   <script type="text/javascript" src="cordova.js"></script>
    <link rel="stylesheet" href="css\materialize.min.css">
    <link rel="stylesheet" href="css\BG.css">
-   <script>
-   if(localStorage.getItem("LocalData") == null)
-    {
-       var data = [];
-       data = JSON.stringify(data);
-       localStorage.setItem("LocalData", data);
-    }
-   </script>
-   <SCRIPT>
-   function scan()
-    {
-       cordova.plugins.barcodeScanner.scan(
-           function (result) {
-               if(!result.cancelled)
-               {
-                   if(result.format == "QR_CODE")
-                   {
-                       navigator.notification.prompt("Please enter name of data",  function(input){
-                           var name = input.input1;
-                           var value = result.text;
-
-                           var data = localStorage.getItem("LocalData");
-                           console.log(data);
-                           data = JSON.parse(data);
-                           data[data.length] = [name, value];
-
-                           localStorage.setItem("LocalData", JSON.stringify(data));
-
-                           alert("Done");
-                       });
-                   }
-               }
-           },
-           function (error) {
-               alert("Scanning failed: " + error);
-           }
-      );
-    }
-   </SCRIPT>
 </head>
 <body>
   <div data-role="page" id="home">
     <div data-role="header">
         <h1>Home</h1>
     </div>
-
+	<div class="card">
+		<div class="card-content">
+			<p id="euri">
+			</p>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-content">
+			<div id="formato">
+			</div>
+		</div>
+	</div>
     <div data-role="main" class="ui-content">
         <p>
-            <a target="_blank" href="javascript:scan();" class="waves-effect waves-blue btn-large color white" style="text-decoration: none">Scan</a>
+            <a target="_blank" onclick="scan();" class="waves-effect waves-blue btn-large color white" style="text-decoration: none">Scan</a>
+        </p>
+    </div>
+		<div data-role="main" class="ui-content">
+        <p>
+            <a target="_blank" onclick="er();" class="waves-effect waves-blue btn-large color white" style="text-decoration: none">actualizar</a>
         </p>
     </div>
 </div>
