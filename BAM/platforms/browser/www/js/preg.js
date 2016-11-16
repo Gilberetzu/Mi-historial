@@ -34,4 +34,11 @@ var inputs = function(){
   var antecedentes = $("#antecedentes").val();
   var users = new Persona(nombre, numero_de_cedula, clave, edad, sexo, raza, nacionalidad,  e_civil, ocupacion, lugar_de_origen, lugar_de_residencia, domicilio, persona_responsable, religion, antecedentes)
   lista_users = users;
+  localStorage.setItem("nombre",lista_users.nombre);
+  localStorage.setItem("cedula",lista_users.numero_de_cedula);
+  localStorage.setItem("clave",lista_users.clave);
+  localStorage.setItem("edad",lista_users.edad);
+  localStorage.setItem("sexo",lista_users.sexo);
+  localStorage.setItem("raza",lista_users.raza);
+  window.location.replace("perfP.html");
 }

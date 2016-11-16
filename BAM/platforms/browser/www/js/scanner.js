@@ -15,4 +15,3 @@ function scan()
        "formats" : "QR_CODE", // default: all but PDF_417 and RSS_EXPANDED
    });
  }
-
